@@ -1,24 +1,14 @@
 input.onButtonPressed(Button.A, function () {
-    counter += 1
-    if (counter > 10) {
-        counter = 0
-    }
-    basic.showNumber(counter)
-})
-input.onButtonPressed(Button.AB, function () {
-    counter = 0
-    basic.showNumber(counter)
+    amount = 1
 })
 input.onButtonPressed(Button.B, function () {
-    counter += -1
-    if (counter < 0) {
-        counter = 10
-    }
-    basic.showNumber(counter)
+    amount = -1
 })
-let counter = 0
-counter = 10
-basic.showNumber(counter)
-basic.forever(function () {
-	
+input.onGesture(Gesture.Shake, function () {
+    steps += amount
+    basic.showNumber(steps)
 })
+let amount = 0
+let steps = 0
+steps = 0
+amount = 1
